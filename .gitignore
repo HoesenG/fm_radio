@@ -1,0 +1,15 @@
+syn/*
+*.zip
+usrp.dat
+**/rev_*
+**/work/*
+**/lib/*
+*.mti*
+*.mpf
+transcript
+*.wlf
+*.prj
+stdout.*
+synlog.tcl
+**/*.ini
+*.prd

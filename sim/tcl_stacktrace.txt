@@ -1,0 +1,15 @@
+Thu Feb 29 14:53:31 CST 2024
+Trace back: ** Error: (vish-4000) A design must be loaded before the "vsim_break" command can be used.
+    while executing
+".vcop Eval vsim_break"
+    invoked from within
+".dockbar.tbf3.simulate.tb.button_28 invoke"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list $w invoke]"
+    (procedure "tk::ButtonUp" line 22)
+    invoked from within
+"tk::ButtonUp .dockbar.tbf3.simulate.tb.button_28"
+    (command bound to event)
+  <2:/vol/mentor/questa_sim-2019.3_2/questasim/linux/tk8.6/bgerror.tcl:106: ::tkerror {** Error: (vish-4000) A design must be loaded before the "vsim_break" command can be used.}
+  <1:proc:204: ::tk::dialog::error::bgerror {** Error: (vish-4000) A design must be loaded before the "vsim_break" command can be used.}
