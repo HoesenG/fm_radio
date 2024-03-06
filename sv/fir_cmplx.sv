@@ -54,7 +54,7 @@ logic [31:0] QUANT_VAL = (1 << BITS);
 function logic[31:0] DEQUANTIZE; 
 input logic[31:0] i;
     begin
-        return int'($signed(i) / $signed(QUANT_VAL));
+        return int'($signed(i) >>>10);
     end
 endfunction
 
@@ -99,7 +99,7 @@ always_comb begin
     y_imag_wr_en = 1'b0;
     y_out_real = '0;
     y_out_imag = '0;
-
+    count_c = count;
     case (state)
         s0: begin
             sum_real_c = '0;

@@ -1,7 +1,7 @@
 
 module fifo #(
     parameter FIFO_DATA_WIDTH = 24,
-    parameter FIFO_BUFFER_SIZE = 1024) 
+    parameter FIFO_BUFFER_SIZE = 8096) 
 (
     input  logic reset,
     input  logic wr_clk,

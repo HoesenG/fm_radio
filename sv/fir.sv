@@ -39,7 +39,7 @@ logic [31:0] QUANT_VAL = (1 << BITS);
 function logic[31:0] DEQUANTIZE; 
 input logic[31:0] i;
     begin
-        return int'($signed(i) / $signed(QUANT_VAL));
+        return int'($signed(i) >>>10);
     end
 endfunction
 
@@ -68,7 +68,7 @@ always_comb begin
     x_rd_en = 1'b0;
     y_wr_en_c = 1'b0;
     y_out_c = '0;
-
+    count_c = count;
     case (state)
         s0: begin
             if (x_empty == 1'b0) begin

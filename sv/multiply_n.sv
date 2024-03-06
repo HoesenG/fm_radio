@@ -13,7 +13,7 @@ logic [31:0] QUANT_VAL = (1 << BITS);
 function logic[31:0] DEQUANTIZE; 
 input logic[31:0] i;
     begin
-        return int'($signed(i) / $signed(QUANT_VAL));
+        return int'($signed(i) >>>10);
     end
 endfunction
 assign dout = DEQUANTIZE(x_in * y_in);

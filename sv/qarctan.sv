@@ -40,7 +40,7 @@ input logic[31:0] i;
     end
 endfunction
 
-typedef enum logic {READY, WORKING} state_t;
+typedef enum logic [2:0]{IDLE, READY, WORKING, DONE} state_t;
 state_t state, state_c;
 
 // divider signals
